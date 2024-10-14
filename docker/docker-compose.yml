@@ -1,0 +1,10 @@
+services:
+  node:
+    container_name: sdk
+    build:
+      context: .
+      dockerfile: node.dockerfile
+    volumes:
+      - ./:/var/www/sdk
+    restart: unless-stopped
+    tty: true

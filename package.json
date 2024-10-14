@@ -1,0 +1,26 @@
+{
+  "name": "cvmaker-sdk",
+  "version": "0.5.0",
+  "description": "Provides a convenient interface for interacting with the CvMaker API.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/taronsarkisyan/cvmaker-sdk.git"
+  },
+  "keywords": [
+    "cvmaker",
+    "sdk"
+  ],
+  "author": "Taron Sarkisyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taronsarkisyan/cvmaker-sdk/issues"
+  },
+  "homepage": "https://github.com/taronsarkisyan/cvmaker-sdk#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
