@@ -78,6 +78,16 @@ class CvMaker {
   }
 
   /**
+   * Generate for fake user
+   * @param {object} data 
+   * @returns 
+   */
+  async generateForFakeUser(data) {
+    const user_token = this.token;
+    return this.request({ user_token, ...data });
+  }
+
+  /**
    * Download CV
    * @param {string} uploadDir 
    * @param {string} downloadUrl 

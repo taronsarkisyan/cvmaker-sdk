@@ -42,10 +42,51 @@ const main = async function () {
   }
 
   // Download & Save CV to the folder
-  const { success: fileUrl } = generateRes;
-  console.log(`[${env.APP_NAME}]: Downloading CV: ${fileUrl}`);
-  await client.downloadCV(uploadDir, fileUrl); //download request to API.
+  const { success: generatedFileUrl } = generateRes;
+  console.log(`[${env.APP_NAME}]: Downloading CV: ${generatedFileUrl}`);
+  await client.downloadCV(uploadDir, generatedFileUrl); //download request to API.
   console.log(`[${env.APP_NAME}]: Successfully saved in the folder: ${uploadDir}`);
+
+  // Generate for fake User
+  console.log(`[${env.APP_NAME}]: Generating CV (for fake user)...`);
+  const generateForFakeUserRes = await client.generateForFakeUser({
+    description,
+    first_name: "Artur",
+    last_name: "Doyle",
+    country: "USA",
+    city: "New York",
+    education: JSON.stringify([
+      { key: "New York Academy", value: "2009 - 2016" }
+    ]),
+    customers: JSON.stringify([
+      { key: "Apple", value: "Jan 2022 - Present (2 years)" },
+      { key: "Google", value: "Jan 2020 - Jan 2022 (2 years)" },
+      { key: "Meta", value: "Jan 2018 - Jan 2020 (2 years)" },
+    ]),
+    languages: JSON.stringify([
+      { key: "English", value: "B2/C1" },
+      { key: "German", value: "B1" },
+      { key: "Ukrainian", value: "C2" }
+    ]),
+    contacts: JSON.stringify([
+      { key: "Mobile", value: "+1XXXXXXXXXX" },
+      { key: "E-Mail", value: "artur@example.com" },
+      { key: "LinkedIn", value: "https://linkedin.com" },
+    ]),
+    managed: "1" //0 for false
+  });
+
+  if (generateRes.code !== 200) {
+    console.log(generateRes.error);
+    return;
+  }
+
+  // Download & Save CV to the folder
+  const { success: generatedForFakeUserfileUrl } = generateForFakeUserRes;
+  console.log(`[${env.APP_NAME}]: Downloading CV (for fake user): ${generatedForFakeUserfileUrl}`);
+  await client.downloadCV(uploadDir, generatedForFakeUserfileUrl); //download request to API.
+  console.log(`[${env.APP_NAME}]: Successfully saved in the folder: ${uploadDir}`);
+
   return 0;
 }
 
