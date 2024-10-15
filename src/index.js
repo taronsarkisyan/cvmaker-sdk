@@ -50,7 +50,7 @@ const main = async function () {
   // Generate for fake User
   console.log(`[${env.APP_NAME}]: Generating CV (for fake user)...`);
   const generateForFakeUserRes = await client.generateForFakeUser({
-    description,
+    description, //job description
     first_name: "Artur",
     last_name: "Doyle",
     country: "USA",
@@ -73,7 +73,8 @@ const main = async function () {
       { key: "E-Mail", value: "artur@example.com" },
       { key: "LinkedIn", value: "https://linkedin.com" },
     ]),
-    managed: "1" //0 for false
+    managed: "1", //0 for false
+    language: "en" //en, de, ua
   });
 
   if (generateRes.code !== 200) {
