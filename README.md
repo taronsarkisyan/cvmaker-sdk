@@ -56,3 +56,60 @@ Key Features:
 * Easy integration
 
 The script reads, downloads, and writes files to disk. Please check the read and write permissions for files in the container.
+
+## Generate Payload
+
+API URL:
+```
+https://cv.arnelify.com/api/v0.5/generate
+```
+
+Payload example (application/json)
+```
+{
+  user_token: 'your-token-here',
+  description: 'your-job-description',
+}
+```
+
+## Generate for fake User
+
+API URL:
+```
+https://cv.arnelify.com/api/v0.5/generate
+```
+
+Payload example (application/json):
+```
+{
+  user_token: 'your-token-here',
+  description: 'your-job-description',
+  first_name: 'Artur',
+  last_name: 'Doyle',
+  country: 'USA',
+  city: 'New York',
+  education: '[{"key":"New York Academy","value":"2009 - 2016"}]',
+  customers: '[{"key":"Apple","value":"Jan 2022 - Present (2 years)"},{"key":"Google","value":"Jan 2020 - Jan 2022 (2 years)"},{"key":"Meta","value":"Jan 2018 - Jan 2020 (2 years)"}]',
+  languages: '[{"key":"English","value":"B2/C1"},{"key":"German","value":"B1"},{"key":"Ukrainian","value":"C2"}]',
+  contacts: '[{"key":"Mobile","value":"+1XXXXXXXXXX"},{"key":"E-Mail","value":"artur@example.com"},{"key":"LinkedIn","value":"https://linkedin.com"}]',
+  managed: '1', //0 for false
+  language: 'en' //en, de, ua
+}
+```
+
+## Response Examples
+Success Response:
+```
+{
+  code: 200, //always 200
+  success: "https://download-link-for-pdf" //always has success
+}
+```
+
+Error Response:
+```
+{
+  code: 409, //not only 409
+  error: "Conflict" //always has error message (string)
+}
+```
