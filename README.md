@@ -71,6 +71,10 @@ Payload example (application/json)
   description: 'your-job-description',
 }
 ```
+You can also find an example of code in bash:
+```
+./src/examples/generate.sh
+```
 
 ## Generate for fake User
 
@@ -82,19 +86,23 @@ https://cv.arnelify.com/api/v0.5/generate
 Payload example (application/json):
 ```
 {
-  user_token: 'your-token-here',
-  description: 'your-job-description',
-  first_name: 'Artur',
-  last_name: 'Doyle',
-  country: 'USA',
-  city: 'New York',
-  education: '[{"key":"New York Academy","value":"2009 - 2016"}]',
-  customers: '[{"key":"Apple","value":"Jan 2022 - Present (2 years)"},{"key":"Google","value":"Jan 2020 - Jan 2022 (2 years)"},{"key":"Meta","value":"Jan 2018 - Jan 2020 (2 years)"}]',
-  languages: '[{"key":"English","value":"B2/C1"},{"key":"German","value":"B1"},{"key":"Ukrainian","value":"C2"}]',
-  contacts: '[{"key":"Mobile","value":"+1XXXXXXXXXX"},{"key":"E-Mail","value":"artur@example.com"},{"key":"LinkedIn","value":"https://linkedin.com"}]',
-  managed: '1', //0 for false
-  language: 'en' //en, de, ua
+  "user_token": "your-token",
+  "description": "your-job-description",
+  "first_name": "Artur",
+  "last_name": "Doyle",
+  "country": "USA",
+  "city": "New York",
+  "education": "[{\"key\":\"New York Academy\",\"value\":\"2009 - 2016\"}]",
+  "customers": "[{\"key\":\"Apple\",\"value\":\"Jan 2022 - Present (2 years)\"},{\"key\":\"Google\",\"value\":\"Jan 2020 - Jan 2022 (2 years)\"},{\"key\":\"Meta\",\"value\":\"Jan 2018 - Jan 2020 (2 years)\"}]",
+  "languages": "[{\"key\":\"English\",\"value\":\"B2/C1\"},{\"key\":\"German\",\"value\":\"B1\"},{\"key\":\"Ukrainian\",\"value\":\"C2\"}]",
+  "contacts": "[{\"key\":\"Mobile\",\"value\":\"+1XXXXXXXXXX\"},{\"key\":\"E-Mail\",\"value\":\"artur@example.com\"},{\"key\":\"LinkedIn\",\"value\":\"https://linkedin.com\"}]",
+  "managed": "1",
+  "language": "en"
 }
+```
+You can also find an example of code in bash:
+```
+./src/examples/generateForFakeUser.sh
 ```
 
 ## Response Examples
