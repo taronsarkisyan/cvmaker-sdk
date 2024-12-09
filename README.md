@@ -5,7 +5,7 @@
 ## 🚀 About
 **CvMaker SDK** - provides a convenient interface for interacting with the [CvMaker](https://cv.arnelify.com|CvMaker) API
 
-> <span style="color: yellow;">IMPORTANT: This repository is deprecated. The project has moved to <a href="https://github.com/arnelify/arnelify-sdk">arnelify-sdk</a>.</span>
+<span style="color: yellow;">IMPORTANT: This repository is deprecated. The project has moved to <a href="https://github.com/arnelify/arnelify-sdk">arnelify-sdk</a>.</span>
 
 ## ⚙️ Before install
 
