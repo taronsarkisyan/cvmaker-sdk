@@ -1,11 +1,8 @@
-<img src="https://static.wikia.nocookie.net/arnelify/images/c/c8/Arnelify-logo-2024.png/revision/latest?cb=20240701012515" style="width:336px;" alt="Arnelify Logo" />
-
-![CvMaker](https://img.shields.io/badge/CvMaker%20SDK-0.5-blue) ![Node](https://img.shields.io/badge/Node-20.15.1-green)
+##IMPORTANT:
+This repository is deprecated. The project has moved to <a href="https://github.com/arnelify/arnelify-sdk">arnelify-sdk</a>.
 
 ## 🚀 About
 **CvMaker SDK** - provides a convenient interface for interacting with the [CvMaker](https://cv.arnelify.com|CvMaker) API
-
->IMPORTANT: This repository is deprecated. The project has moved to <a href="https://github.com/arnelify/arnelify-sdk">arnelify-sdk</a>.
 
 ## ⚙️ Before install
 
